@@ -5,6 +5,7 @@ import { useHistory } from "react-router";
 import Gratitude from "./../assets/grForm.png";
 import { useDispatch } from "react-redux";
 import { notEkleAPI } from "../actions";
+import { toast } from "react-toastify";
 
 export default function PostForm() {
   const {
@@ -25,7 +26,7 @@ export default function PostForm() {
         .join("|"),
     };
     dispatch(notEkleAPI(yeniNot));
-
+    toast.success("Success");
     // burada ilgili eylemi dispatch edin
     // toast mesajı gösterin
     // sonra aşağıdaki satırı aktifleştirin

@@ -3,6 +3,7 @@ import { formatDistanceToNow } from "date-fns";
 import { tr } from "date-fns/locale";
 import { notSilAPI } from "../actions";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 export default function Post({ item }) {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ export default function Post({ item }) {
     // burada ilgili eylemi dispatch edin
     // sonra toast mesajı gösterin
   }
+  toast.info("Deleted!");
 
   return (
     <div className="beyazKutu p-8 pb-6 mb-4 text-sm">
