@@ -10,10 +10,11 @@ export default function Post({ item }) {
 
   function handleSil() {
     dispatch(notSilAPI(item.id));
+    toast.info("Deleted!");
+
     // burada ilgili eylemi dispatch edin
     // sonra toast mesajı gösterin
   }
-  toast.info("Deleted!");
 
   return (
     <div className="beyazKutu p-8 pb-6 mb-4 text-sm">
